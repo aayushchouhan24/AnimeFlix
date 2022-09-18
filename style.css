@@ -1,0 +1,201 @@
+* {
+  user-select: none;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: Gilroy;
+  cursor: url("https://cdn.custom-cursor.com/db/10232/32/starter-fire-cursor.png") 4 12, auto;
+
+}
+
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.fp-watermark{
+  display: none;
+}
+#fullPage {
+  height: 100%;
+  width: 100%;
+}
+
+#page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+#section1 .fp-bg{
+  background-image: url('imgs/alvaro-genious.jpg');
+  background-size: cover;
+  background-position: center 80%;
+}
+
+
+#page img {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.container {
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  width: 100%;
+}
+
+.container h1 {
+  text-shadow: 2px 2px 8px #000000;
+  font-weight: 600;
+  font-size: 2.5vw;
+  color: white;
+  margin-bottom: 0.3%;
+}
+
+.container p {
+  text-shadow: 2px 2px 8px #000000;
+  width: 40%;
+  font-weight: 300;
+  font-size: .8vw;
+  color: white;
+  margin-bottom: 1%;
+
+}
+
+#top{
+  pointer-events: none;
+    padding: 2% 4%;
+}
+
+#bottom {padding: 0.5% 4% 1%;
+  background-color: rgba(0, 0, 0, 0.121)
+}
+
+#more {
+  pointer-events:all ;
+  overflow: hidden;
+  display: flex;
+  overflow-x:auto;
+  align-items: center;
+  height: 27vh
+}
+
+#more::-webkit-scrollbar {
+  display: none;
+}
+
+#item {
+  pointer-events: none;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.364);
+  margin-right: 1vw;
+  height: 12vw;
+  width: 17vw;
+}
+
+#img {
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  width: 17vw;
+  height: 10vw;
+}
+
+#item h1 {
+  padding:.5vw;
+  font-weight: 300;
+  font-size: .8vw;
+}
+
+
+.btn {
+  cursor: url("https://cdn.custom-cursor.com/db/10231/32/starter-fire-pointer.png") 4 12, auto;
+  pointer-events: all;
+  background: transparent;
+  position: relative;
+  border-radius: .5vw;
+  border: .15vw solid #fff;
+  margin-left: 1vw;
+  margin-top: 1.2vh;
+  margin-bottom: 4vw;
+  width: 7vw;
+  height: 2.6vw;
+  font-size: .7vw;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: .3vw;
+  color: #fff;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  transition-delay: 0.3s;
+  color: #000;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff;
+}
+
+.btn span {
+  position: relative;
+  z-index: 100;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: -1.01vw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.01vw;
+  height: .1vw;
+  border-radius: .5vw;
+  background: #fff;
+  box-shadow: .3vw -.4vw 0 #fff, .3vw .4vw 0 #fff;
+  transition: width 0.3s, left 0.3s, height 0.3s, box-shadow 0.3s;
+}
+
+
+.btn:hover::before {
+  width: 60%;
+  height: 110%;
+  box-shadow: .3vw 0 0 #fff, .3vw 0 0 #fff;
+  transition-delay: 0s, 0.3s, 0.3s, 0.3s;
+}
+
+.btn:hover::before {
+  left: -2px;
+  transition-delay: 0s, 0s, 0.2s, 0.3s;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  border-radius: .5vw;
+  right: -1.01vw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.01vw;
+  height: .1vw;
+  background: #fff;
+  box-shadow: -.3vw -.4vw 0 #fff, -.3vw .4vw 0 #fff;
+  transition: width 0.3s, right 0.3s, height 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover::after {
+  width: 60%;
+  height: 110%;
+  box-shadow: -.3vw 0 0 #fff, -.3vw 0 0 #fff;
+  transition-delay: 0s, 0s, 0.2s, 0.3s;
+}
+
+.btn:hover::after {
+  right: -.1vw;
+  transition-delay: 0, 0.3s, 0.3s, 0.3s;
+}
